@@ -5,7 +5,6 @@ import java.io.File
 import java.io.FileReader
 import java.util.*
 import java.util.concurrent.ExecutionException
-import javax.sound.midi.SysexMessage
 
 /**
  * Start of stop handler for cassandra database service on any platform.
