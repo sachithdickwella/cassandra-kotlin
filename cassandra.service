@@ -1,0 +1,12 @@
+[Unit]
+Description=Cassandra database service
+After=network.target
+
+[Service]
+Type=forking
+RemainAfterExit=yes
+ExecStart=/usr/java/jdk1.8.0_112/jre/bin/java -jar /home/sachith/Cassandra/cassandra.jar start /apache-cassandra-3.0.10/bin/cassandra
+ExecStop=/usr/java/jdk1.8.0_112/jre/bin/java -jar /home/sachith/Cassandra/cassandra.jar stop
+
+[Install]
+WantedBy=multi-user.target
