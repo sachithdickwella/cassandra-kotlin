@@ -1,4 +1,4 @@
-package com.jph.impl
+package org.cassandra.starter
 
 import java.io.BufferedReader
 import java.io.File
@@ -61,12 +61,13 @@ private class Cassandra {
 }
 
 private enum class Op {
-    START, STOP;
+    START, STOP, RESTART;
 
     override fun toString(): String {
         when (this) {
             START -> return "start"
             STOP -> return "stop"
+            RESTART -> return "restart"
         }
     }
 }
